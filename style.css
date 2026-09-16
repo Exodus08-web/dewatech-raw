@@ -125,20 +125,20 @@ nav a:hover {
     z-index: 1;
 }
 
-.tags {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
+.hero-label {
+    color: var(--yellow);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
     margin-bottom: 28px;
 }
 
-.tags span {
+.hero h1 {
+    max-width: 900px;
     color: white;
-    border: 1px solid rgba(255,255,255,0.4);
-    padding: 8px 11px;
-    font-family: monospace;
-    font-size: 10px;
-    text-transform: uppercase;
+    font-size: clamp(58px, 8vw, 115px);
+    line-height: 0.86;
+    letter-spacing: -5px;
 }
 
 .hero h1 {
@@ -150,10 +150,12 @@ nav a:hover {
 }
 
 .hero-subtitle {
-    color: var(--yellow);
-    font-size: clamp(22px, 3vw, 38px);
-    margin-top: 22px;
-    margin-bottom: 45px;
+    color: white;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    margin-bottom: 35px;
 }
 
 .hero-bottom {
@@ -288,7 +290,7 @@ nav a:hover {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1.3fr 0.7fr;
     gap: 20px;
 }
 
@@ -297,9 +299,64 @@ nav a:hover {
     border: 1px solid var(--border);
 }
 
-.service:last-child {
+.service:nth-child(3) {
     grid-column: 1 / -1;
 }
+
+.service:nth-child(4),
+.service:nth-child(5) {
+    min-height: 100%;
+}
+
+.service-image {
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    background: var(--blue);
+}
+
+.service:nth-child(3) .service-image {
+    height: 340px;
+}
+
+.service-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-image span {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 7px 10px;
+    background: var(--yellow);
+    color: var(--blue);
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.service-info {
+    padding: 28px;
+}
+
+.service-info h3 {
+    color: var(--blue);
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.service-info p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.service {
+    background: white;
+    border: 1px solid var(--border);
+}
+
 
 .service-image {
     height: 280px;
